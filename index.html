@@ -25,32 +25,51 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/material.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/right-popup-menu.css">
+
 </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <header class="mdl-layout__header mdl-color--primary">
+
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
+
+        <div class="mdl-layout__header-row">
+            <h3>xmoonlight GitHub Page</h3>
+        </div>
+
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>xmoonlight GitHub Page</h3>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-          <a href="#features" class="mdl-layout__tab">Features</a>
-          <a href="#features" class="mdl-layout__tab">Details</a>
-          <a href="#features" class="mdl-layout__tab">Technology</a>
-          <a href="#features" class="mdl-layout__tab">FAQ</a>
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-          </button>
-        </div>
-      </header>
+
+          <div class="mdl-cell--hide-phone mdl-js-ripple-effect mdl-color--primary-dark mdl-layout--fixed-tabs mdl-layout__tab-bar">
+            <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+            <a href="#features" class="mdl-layout__tab">Features</a>
+            <a href="#details" class="mdl-layout__tab">Details</a>
+            <a href="#technology" class="mdl-layout__tab">Technology</a>
+            <a href="#faq" class="mdl-layout__tab">FAQ</a>
+          </div>
+
+       </header>
+
+
+<div class="mdl-layout--small-screen-only mdl-layout__drawer">
+    <span class="mdl-layout-title">Main menu</span>
+
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#overview"   onclick=selectLayoutTab(this)>Overview</a>
+      <a class="mdl-navigation__link" href="#features"   onclick=selectLayoutTab(this)>Features</a>
+      <a class="mdl-navigation__link" href="#details"    onclick=selectLayoutTab(this)>Details</a>
+      <a class="mdl-navigation__link" href="#technology" onclick=selectLayoutTab(this)>Technology</a>
+      <a class="mdl-navigation__link" href="#faq"        onclick=selectLayoutTab(this)>FAQ</a>
+    </nav>
+</div>
+
+
+
+
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
-
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-cell--12-col mdl-shadow--2dp">
             <div class="mdl-card__supporting-text">
                 <h4>Page is under construction!</h4>
@@ -210,6 +229,74 @@
             </div>
           </section>
         </div>
+
+        <div class="mdl-layout__tab-panel" id="details">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Details</h4>
+              Coming soon...
+            </div>
+          </section>
+        </div>
+
+        <div class="mdl-layout__tab-panel" id="technology">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Technology</h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Lorem ipsum dolor sit amet</h5>
+                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Lorem ipsum dolor sit amet</h5>
+                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Lorem ipsum dolor sit amet</h5>
+                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                </div>
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Read our features</a>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
+              <li class="mdl-menu__item">Lorem</li>
+              <li class="mdl-menu__item" disabled>Ipsum</li>
+              <li class="mdl-menu__item">Dolor</li>
+            </ul>
+          </section>
+         </div>
+
+
+       <!-- bottom for all layouts -->
+
+          <div class="mdl-grid">
+           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card__supporting-text">
+                <h4>Page is under construction!</h4>
+                  <a href="http://sitecoder.blogspot.com" target="_blank">Read my current blog now</a>
+	    </div>
+           </section>
+          </div>
+
+       <!-- /bottom for all layouts -->
+
+
+
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
@@ -266,5 +353,20 @@
       </main>
     </div>
     <script src="./js/material.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      function selectLayoutTab(a) {
+            $(".mdl-layout__drawer").removeClass("is-visible");
+            anchor=a.href.replace(/.*\#(.*)/g, "#$1");
+            // remove all is-active classes from tabs
+            $('a.mdl-layout__tab').removeClass('is-active');
+            // activate desired tab
+            $('a[href="'+anchor+'"]').addClass('is-active');
+            // remove all is-active classes from panels
+            $('.mdl-layout__tab-panel').removeClass('is-active');
+            // activate desired tab panel
+            $(anchor).addClass('is-active');
+     }
+   </script>
   </body>
 </html>
